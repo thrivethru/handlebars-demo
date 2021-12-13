@@ -1,0 +1,35 @@
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Welcome to Restaurants.</h1>
+                <p class="lead text-muted">Please review one of our
+                    {{restaurants.length}}
+                    restaurants.</p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {{#each restaurants}}
+                    <a href="/{{id}}">
+                        <article class="col">
+                            <div class="card shadow-sm">
+                                <img src="{{image}}" class="card-img" />
+                                <div class="card-img-overlay">
+                                    {{!-- <h5
+                                    class="card-title bg-secondary bg-opacity-25"
+                                >{{name}}</h5> --}}
+                                    <h3><span
+                                            class="badge bg-dark bg-opacity-75"
+                                        >{{name}}</span></h3>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</main>

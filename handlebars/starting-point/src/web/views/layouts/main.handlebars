@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Restaurants</title>
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/superhero/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="/static/css/style.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand" href="/">
+                    <img
+                        src="/static/images/logo.png"
+                        height="20"
+                        width="20"
+                    /><strong> Restaurants</strong></a>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                {{! <form class="d-flex align-self-center">
+                    <input
+                        class="form-control me-sm-2"
+                        type="text"
+                        placeholder="Search"
+                    />
+                    <button
+                        class="btn btn-secondary my-2 my-sm-0"
+                        type="submit"
+                    >Search</button>
+                </form> }}
+            </div>
+        </nav>
+
+        {{{body}}}
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
