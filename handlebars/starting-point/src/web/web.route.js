@@ -5,10 +5,11 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const restaurants = await Restaurant.findAll();
-  res.render("home", { restaurants });
+  res.render("home", { home: true, restaurants });
 });
 
 router.get("/:id", async (req, res) => {
+  const restaurants = await Restaurant.findAll();
   const restaurant = await Restaurant.findByPk(req.params.id, {
     include: { all: true, nested: true },
   });
@@ -21,7 +22,7 @@ router.get("/:id", async (req, res) => {
       }).format(item.price);
     })
   );
-  res.render("restaurant", { restaurant });
+  res.render("restaurant", { restaurants, restaurant });
 });
 
 export default router;
